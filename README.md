@@ -2,6 +2,8 @@
 
 A simple Clojure library wrapper for MailChimp
 
+[![Build Status](https://secure.travis-ci.org/economico/climp.png)](http://travis-ci.org/economico/climp)
+
 ## Usage
 
 Add the following to your project.clj's dependencies section:
