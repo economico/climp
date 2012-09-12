@@ -1,4 +1,4 @@
-(defproject climp "0.1.0"
+(defproject climp "0.1.1"
   :description "MailChimp wrapper for clojure WIP"
   :url "http://github.com/economico/mailchimp-clj"
   :license {:name "Eclipse Public License"
