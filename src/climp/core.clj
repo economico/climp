@@ -24,13 +24,23 @@
   (str (mailchimp-url) "?method=" method))
 
 (defn call-mailchimp
-  "Call a method on MailChimp"
-  [method params]
-  (:body (client/post (method-url method) {
-    :as :json
-    :content-type :json
-    :body (generate-string (assoc params :apikey *mc-api-key*))
-    })))
+  "Call a method on MailChimp
+
+  The available options are:
+
+  :clj-http-options - extra options you would like passed through to clj-http
+
+  Example calls:
+
+  (call-mailchimp \"listActivity\" {:id \"a1a1a1a1a1\"})
+
+  (call-mailchimp \"listActivity\" {:id \"a1a1a1a1a1\"} {:clj-http-options {:socket-timeout 1000}})"
+  [method params & [opts]]
+  (let [base-params  {:as :json
+                      :content-type :json
+                      :body (generate-string (assoc params :apikey *mc-api-key*))}
+        final-params (merge base-params (:clj-http-options opts))]
+    (:body (client/post (method-url method) final-params))))
 
 (defn lists
   "return lists"
