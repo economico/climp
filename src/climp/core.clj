@@ -4,7 +4,7 @@
 
 (def ^:dynamic *mc-api-key*
   (let [env (System/getenv)]
-    (get env "MC_API_KEY" (get env "MAILCHIMP_API_KEY"))))
+    (get env "MC_API_KEY" (get env "MAILCHIMP_API_KEY" (System/getProperty "MC_API_KEY")))))
 
 (defn mailchimp-dc
   "Return the MailChimp Datacenter for API KEY"

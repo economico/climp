@@ -28,7 +28,7 @@ Subscribe an email address:
 
 ## Configuring API Keys
 
-The easiest way to set it up is to set your api key in the MC_API_KEY environment variable.
+The easiest way to set it up is to set your api key in the MC_API_KEY environment variable or system property.
 
 Alternatively you can create a dynamic binding for *mc-api-key*.
 
