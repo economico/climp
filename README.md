@@ -8,7 +8,7 @@ A simple Clojure library wrapper for MailChimp
 
 Add the following to your project.clj's dependencies section:
 
-    [climp "0.1.1"]
+    [climp "0.1.2"]
 
 Import the library:
 
